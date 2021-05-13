@@ -1,0 +1,19 @@
+#include <Servo.h> 
+// include the header file for using servo motor functions in the program
+
+Servo myservo; // here we have created an object named as myservo of type Servo
+
+void setup() {
+  // put your setup code here, to run once:
+  myservo.attach(9); // attach the servo motor on pin 9 of Arduino board
+  // i want to rotate the motor from 0 to 45 degree with 1 degree increment
+  for(int m =0; m<=45; m++)
+  {
+    myservo.write(m);
+    delay(200);
+  }
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
